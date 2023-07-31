@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "CoenraadS.bracket-pair-colorizer-2",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "formulahendry.auto-rename-tag",
+    "jpoissonnier.vscode-styled-components",
+    "PKief.material-icon-theme",
+    "wix.vscode-import-cost",
+    "sdras.night-owl",
+    "dsznajder.es7-react-js-snippets",
+    "burkeholland.simple-react-snippets",
+    "streetsidesoftware.code-spell-checker",
+    "firsttris.vscode-jest-runner",
+    "meganrogge.template-string-converter",
+    "vespa-dev-works.jestrunit"
+    // "silvenon.mdx"
+    // "pflannery.vscode-versionlens"
+  ]
+}

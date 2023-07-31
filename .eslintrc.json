@@ -1,0 +1,130 @@
+{
+  "plugins": ["react", "@emotion", "import"],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "airbnb",
+    "prettier",
+    "next",
+    "next/core-web-vitals"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "globals": {
+    "React": true,
+    "JSX": true
+  },
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "jest": true
+  },
+  "ignorePatterns": [
+    ".next/*",
+    "public/*",
+    "dist/*",
+    "node_modules/*",
+    "**/*.html",
+    "**/*.test.ts",
+    "**/*.d.ts",
+
+    // ignore all root files with below extensions
+    "/*.ts",
+    "/*.js",
+    "/*.cjs",
+    "/*.md",
+    "/*.json",
+    "/*.mjs",
+    "/*.yml"
+  ],
+  "rules": {
+    //NEXTJS
+    "react/no-array-index-key": "off",
+    "@typescript-eslint/no-floating-promises": "off",
+    "react/destructuring-assignment": "off",
+    "react/display-name": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@next/next/no-img-element": "off",
+    "@next/next/no-document-import-in-page": "off",
+    "@typescript-eslint/unbound-method": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    // note you must disable the base rule as it can report incorrect errors
+    /*
+     * https://typescript-eslint.io/rules/no-redeclare/
+     */
+    "no-prototype-builtins": "off",
+    "@typescript-eslint/no-redeclare": ["error"],
+    "no-redeclare": 0,
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
+    "@typescript-eslint/no-unsafe-return": "off",
+    "no-unused-vars": "off",
+    "no-nested-ternary": "off",
+    "no-console": ["warn", { "allow": ["warn", "error", "dir"] }],
+    "no-bitwise": "off",
+    "no-shadow": "off",
+    "import/prefer-default-export": "off",
+    "react/state-in-constructor": "off",
+    "react/jsx-props-no-spreading": "off",
+    "prefer-spread": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "./src/setupTests.ts",
+          "**/*.test.tsx",
+          "**/*.test.ts",
+          "**/*.stories.tsx"
+        ]
+      }
+    ],
+    "no-underscore-dangle": "off",
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal"],
+        // "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "no-param-reassign": 0,
+    "prefer-object-spread": 0,
+    "import/no-unresolved": "error",
+    "import/extensions": [0],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-one-expression-per-line": [0],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".tsx"]
+      }
+    ],
+    "camelcase": "off"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "project": "./tsconfig.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+type MainMember {
+  id: ID!
+  name: String!
+  fullName: String!
+}
+
+type Query {
+  members: [MainMember!]!
+}
