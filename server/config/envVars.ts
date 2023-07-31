@@ -3,7 +3,7 @@ import { ALL_SHEETS } from './constants';
 import { ENV_MODE } from './enums';
 import { paths } from './paths';
 
-const privateKey = `-`;
+const privateKey = `n`;
 
 const envVars = {
   env: process.env.NODE_ENV,

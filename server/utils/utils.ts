@@ -71,7 +71,4 @@ function checkDateConstraint(date: string): { thisMonth: boolean; today: boolean
   };
 }
 
-function titleCase(str: string) {
-  return `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
-}
-export { addHeaders, getFileMetaData, titleCase, mapData, checkDateConstraint, isDateToday };
+export { addHeaders, getFileMetaData, mapData, checkDateConstraint, isDateToday };

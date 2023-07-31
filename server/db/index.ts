@@ -1,4 +1,4 @@
-export * from './models';
-export * from './knex';
-export * from './projection';
+export * from './client';
+export * from './model';
 export * from './tableConfig';
+export * from './pubsub';

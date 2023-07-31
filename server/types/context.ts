@@ -1,7 +1,12 @@
-import type { DataSource } from '../db/knex';
+import type { PrismaClient, Prisma } from '@prisma/client';
 
 export interface IContext {
   ip: string;
   requestedBy: string;
-  db: DataSource;
+  prisma: PrismaClient<
+    Prisma.PrismaClientOptions,
+    never,
+    Prisma.RejectOnNotFound | Prisma.RejectPerOperation | undefined
+  >;
+  token: string | null;
 }

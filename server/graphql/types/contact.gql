@@ -1,0 +1,80 @@
+type Contact {
+  avatar: String!
+  email: String!
+  firstName: String!
+  fullName: String
+  id: String!
+  lastName: String!
+}
+
+input ContactCreateInput {
+  avatar: String!
+  email: String!
+  firstName: String!
+  lastName: String!
+}
+
+input ContactDeleteInput {
+  id: String!
+}
+
+input ContactGetInput {
+  id: String!
+}
+
+input ContactUpdateInput {
+  avatar: String
+  email: String
+  firstName: String
+  id: String!
+  lastName: String
+}
+
+type Mutation {
+  """
+  Create a contact
+  """
+  createContact(
+    """
+    Payload for Contact creation
+    """
+    input: ContactCreateInput!
+  ): Contact
+
+  """
+  Create a contact
+  """
+  deleteContact(
+    """
+    Payload for Contact deletion
+    """
+    input: ContactDeleteInput!
+  ): Contact
+
+  """
+  Delete a contact
+  """
+  updateContact(
+    """
+    Payload for Contact update
+    """
+    input: ContactUpdateInput!
+  ): Contact
+}
+
+type Query {
+  """
+  Fetch a contact by given id
+  """
+  contact(
+    """
+    Id of contact
+    """
+    input: ContactGetInput!
+  ): Contact
+
+  """
+  Fetch all contacts
+  """
+  contacts: [Contact]
+}

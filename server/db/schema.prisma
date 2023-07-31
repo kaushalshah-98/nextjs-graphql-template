@@ -1,0 +1,19 @@
+generator client {
+    provider        = "prisma-client-js"
+    previewFeatures = ["referentialIntegrity", "fullTextSearch"]
+}
+
+datasource db {
+    provider             = "mysql"
+    url                  = env("DB_CONNECTION")
+    shadowDatabaseUrl    = env("SHADOW_DB_CONNECTION")
+    referentialIntegrity = "prisma"
+}
+
+model Contact {
+    id        String @id @default(cuid())
+    firstName String
+    lastName  String
+    email     String
+    avatar    String
+}
